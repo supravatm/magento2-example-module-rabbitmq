@@ -1,10 +1,36 @@
-# M2-Commerce-RabbitMQ
+# Example module of RabbitMQ message queues in Magento 2
 
+## Prerequisites
+This tutorial assumes RabbitMQ is installed and running on ```localhost``` on the standard port ```(5672)```. In case you use a different host, port or credentials, connections settings would require adjusting.
 
-https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-rabbitmq
+## Publish message
 
-https://www.rabbitmq.com/tutorials/tutorial-one-php.html
+```
+php bin/magento example:rabbit:publish
+```
+Output will be
 
-https://webkul.com/blog/here-we-will-learn-how-to-configure-and-use-rabbitmq-in-magento-2-3/
+```
+Message published successfully
+```
 
-https://devdocs.magento.com/guides/v2.2/extension-dev-guide/message-queues/config-mq.html
+## Executing consumers queue
+
+Check if the queue is registered by running
+
+```
+php bin/magento queue:consumers:list
+```
+##### Output
+
+```
+example.consumer
+```
+Run consumer ```example.consumer```
+
+```
+php bin/magento queue:consumers:start example.consumer
+```
+
+### Note:
+For a production environment, will configure a cron job for the consumer is always running.
