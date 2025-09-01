@@ -1,4 +1,11 @@
 <?php
+/**
+ * Package:  SMG_RabbitMQExample
+ * Author: Supravat Mondal <supravat.com@gmail.com>
+ * license: MIT
+ * Copyright: 2025
+ * Description: Process of a Queue data
+ */
 
 declare(strict_types=1);
 

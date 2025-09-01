@@ -1,5 +1,14 @@
 <?php
-declare(strict_types=1);
+/**
+ * Package: SMG_RabbitMQExample
+ * Author: Supravat Mondal <supravat.com@gmail.com>
+ * license: MIT
+ * Copyright: 2025
+ * Description: Publish to Queue
+ */
+
+declare(strict_types= 1);
+
 namespace SMG\RabbitMQExample\Model;
 
 use Magento\Framework\MessageQueue\PublisherInterface;
